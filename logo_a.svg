@@ -1,0 +1,10 @@
+<svg width="560" height="230" viewBox="0 0 560 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="tres salsas">
+  <!-- Icono: gota de salsa roja con chile en negativo -->
+  <path d="M280 28 C 280 28 230 98 230 134 A 50 50 0 1 0 330 134 C 330 98 280 28 280 28 Z" fill="#E63946"/>
+  <!-- Chile (crema, espacio negativo) -->
+  <path d="M279 70 C 290 86 293 103 285 116 C 281 123 269 123 265 115 C 259 100 263 82 279 70 Z" fill="#F1E3C3"/>
+  <!-- Wordmark -->
+  <text x="280" y="198" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="46" letter-spacing="0.5">
+    <tspan fill="#E63946">tres</tspan><tspan fill="#2A9D8F"> salsas</tspan>
+  </text>
+</svg>

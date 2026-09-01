@@ -1,0 +1,12 @@
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Taco tres salsas">
+  <!-- Tortilla (verde): forma de U abierta -->
+  <path d="M48 214 C 48 112 132 58 210 62 C 284 66 316 134 296 212 C 278 288 66 288 48 214 Z" fill="#2A9D8F"/>
+  <!-- Relleno (rojo): domo superior -->
+  <path d="M138 108 C 160 76 202 72 226 90 C 242 102 240 122 222 130 C 196 112 158 116 138 108 Z" fill="#E63946"/>
+  <!-- Ingrediente (crema): inferior izquierdo -->
+  <path d="M48 214 C 68 238 100 248 126 240 L 92 210 Z" fill="#F1E3C3"/>
+  <!-- Gota verde (queso/salsa cayendo) -->
+  <path d="M240 236 C 246 258 249 270 245 281 C 242 289 233 289 231 281 C 226 270 230 254 240 236 Z" fill="#2A9D8F"/>
+  <!-- Gota roja (salsa cayendo) -->
+  <path d="M266 226 C 272 244 275 254 271 265 C 268 273 259 273 257 265 C 252 254 256 240 266 226 Z" fill="#E63946"/>
+</svg>

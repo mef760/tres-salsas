@@ -1,20 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="fire" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#E63946"/>
-      <stop offset="1" stop-color="#F4A261"/>
-    </linearGradient>
-  </defs>
-  <!-- Fondo tortilla -->
-  <rect width="600" height="200" rx="24" fill="#1D1A17"/>
-  <!-- "3" estilizado = gota de salsa cayendo -->
-  <g>
-    <text x="120" y="150" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="150" fill="url(#fire)" letter-spacing="-6">3</text>
-    <!-- gota cayendo del 3 -->
-    <path d="M100 130 C96 150 92 165 92 178 C92 190 102 198 116 198 C130 198 140 190 140 178 C140 165 136 150 132 130 C121 140 111 140 100 130 Z" fill="#E63946" opacity="0.85"/>
-  </g>
-  <!-- Wordmark -->
-  <text x="170" y="108" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="46" fill="#F1E3C3" letter-spacing="2">TRES SALSAS</text>
-  <text x="172" y="138" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="16" fill="#2A9D8F" letter-spacing="4">3 TACOS · 3 SALSAS · HECHOS EN CASA</text>
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Taco tres salsas">
+  <!-- Tortilla (verde): forma de U abierta -->
+  <path d="M48 214 C 48 112 132 58 210 62 C 284 66 316 134 296 212 C 278 288 66 288 48 214 Z" fill="#2A9D8F"/>
+  <!-- Relleno (rojo): domo superior -->
+  <path d="M138 108 C 160 76 202 72 226 90 C 242 102 240 122 222 130 C 196 112 158 116 138 108 Z" fill="#E63946"/>
+  <!-- Ingrediente (crema): inferior izquierdo -->
+  <path d="M48 214 C 68 238 100 248 126 240 L 92 210 Z" fill="#F1E3C3"/>
+  <!-- Gota verde (queso/salsa cayendo) -->
+  <path d="M240 236 C 246 258 249 270 245 281 C 242 289 233 289 231 281 C 226 270 230 254 240 236 Z" fill="#2A9D8F"/>
+  <!-- Gota roja (salsa cayendo) -->
+  <path d="M266 226 C 272 244 275 254 271 265 C 268 273 259 273 257 265 C 252 254 256 240 266 226 Z" fill="#E63946"/>
 </svg>
