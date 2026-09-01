@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRES SALSAS · Tacos caseros</title>
+<meta name="description" content="3 tacos. 3 salsas. Hechos en casa. Tacos de carne, pollo y verdura — pedí directo por WhatsApp o por PedidosYa.">
+<meta property="og:title" content="TRES SALSAS · Tacos caseros">
+<meta property="og:description" content="3 tacos. 3 salsas. Hechos en casa.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="logo.svg">
+<style>
+  :root{
+    --fire:#E63946; --tortilla:#F1E3C3; --verde:#2A9D8F; --ink:#1D1A17;
+    --bg:#14100c; --panel:#221b14; --card:#2f261c;
+    --txt:#F1E3C3; --muted:#c9b89a; --line:#453728; --radius:16px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:640px;margin:0 auto;padding:20px 16px 48px}
+  header{text-align:center;padding:24px 0 8px}
+  .logo{width:100%;max-width:340px;height:auto;margin:0 auto;display:block}
+  .claim{color:var(--muted);font-size:15px;margin-top:10px}
+  .pill{display:inline-block;margin-top:12px;padding:6px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-size:13px;color:var(--muted)}
+  section{margin-top:32px}
+  h2{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--fire);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+  h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .toggle{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:16px}
+  .toggle button{flex:1;border:none;background:transparent;color:var(--muted);font-family:inherit;font-size:14px;font-weight:700;padding:10px;border-radius:999px;cursor:pointer}
+  .toggle button.on{background:var(--fire);color:#fff}
+  .save-banner{background:linear-gradient(135deg,rgba(42,157,143,.18),rgba(42,157,143,.34));border:1px solid rgba(42,157,143,.6);border-radius:12px;padding:12px 14px;font-size:13px;margin-bottom:16px;color:var(--txt)}
+  .save-banner b{color:#7ac74f}
+  .taco{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:14px}
+  .taco-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+  .taco-top h3{font-size:19px;font-weight:800}
+  .taco-top .price{font-size:18px;font-weight:900;color:var(--fire);white-space:nowrap}
+  .desc{color:var(--muted);font-size:14px;margin-top:6px}
+  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+  .tag{font-size:11px;padding:3px 9px;border-radius:999px;background:var(--card);border:1px solid var(--line);color:var(--txt)}
+  .upsell{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--card);border:1px dashed var(--fire);border-radius:12px;padding:14px 16px;margin-top:14px}
+  .upsell .lbl{font-size:14px}
+  .upsell .lbl small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+  .upsell .price{font-weight:900;color:var(--fire);font-size:16px;white-space:nowrap}
+  .orden{background:var(--panel);border:1px dashed var(--verde);border-radius:var(--radius);padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px}
+  .orden .lbl{font-size:13px;color:var(--muted)}
+  .orden .lbl small{display:block;margin-top:2px}
+  .orden .big{font-size:22px;font-weight:900;color:var(--verde);white-space:nowrap}
+  .cta{display:block;text-align:center;text-decoration:none;border-radius:var(--radius);padding:16px;font-weight:800;font-size:16px;margin-top:14px}
+  .cta.wa{background:linear-gradient(135deg,#25d366,#1da851);color:#052e16}
+  .cta.py{background:var(--card);border:1px solid var(--fire);color:var(--fire)}
+  .cta small{display:block;font-weight:500;font-size:12px;opacity:.85;margin-top:2px}
+  .info{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+  .info-row{display:flex;justify-content:space-between;gap:10px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:14px}
+  .info-row:last-child{border-bottom:none}
+  .info-row span:first-child{color:var(--muted)}
+  .qr-box{text-align:center;margin-top:14px}
+  .qr-box img{width:160px;height:160px;border-radius:12px;background:#fff;padding:8px}
+  .qr-box p{color:var(--muted);font-size:12px;margin-top:8px}
+  footer{margin-top:40px;text-align:center;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ CONFIG: editá SOLO estos valores ============ -->
+  <script id="config" type="application/json">
+  {
+    "brand": "TRES SALSAS",
+    "tagline": "3 tacos. 3 salsas. Hechos en casa.",
+    "claim": "Caseros, calentitos y hechos en nuestra cocina de barrio",
+    "hours": "Mar a Dom · 18:00 a 23:30",
+    "zone": "Zona de entrega: 3 km a la redonda",
+    "whatsapp": "5491100000000",
+    "pedidosya_url": "https://socios.pedidosya.com.ar/es",
+    "site_url": "https://mef760.github.io/tres-salsas/",
+    "commission": 0.30,
+    "menu": [
+      { "id":"carne",   "nombre":"Taco de Carne",   "desc":"Carne picada salteada a la plancha, cebolla pochada, cilantro fresco y salsa ROJA AHUMADA.",            "precio":4500,"precio_py":6800,"tags":["clásico"] },
+      { "id":"pollo",   "nombre":"Taco de Pollo",   "desc":"Suprema marinada en limón, ajo y comino; verde PICANTE de mortero. El que no sabe a pollo de cadena.", "precio":4500,"precio_py":6800,"tags":["estrella"] },
+      { "id":"verdura", "nombre":"Taco de Verdura", "desc":"Mix de calabacín, cebolla, pimiento y choclo salteado con queso gratinado y CREMA SUAVE.",        "precio":4500,"precio_py":6800,"tags":["veggie"] }
+    ],
+    "orden3": { "nombre":"Orden de 3 tacos", "desc":"Elegí 3 (podés combinar). Sale con las 3 salsas.", "precio":13000, "precio_py":19500 },
+    "upsell": { "salsa_extra":{"nombre":"Salsa extra","desc":"Verde picante, roja ahumada o crema suave","precio":500}, "sexto_gratis":"Tu 6º pedido directo: GRATIS" },
+    "instagram": "https://instagram.com/tressalsas.ok"
+  }
+  </script>
+  <!-- =========================================================== -->
+
+  <header>
+    <img class="logo" src="logo.svg" alt="TRES SALSAS">
+    <p class="claim" id="el-claim"></p>
+    <span class="pill" id="el-hours"></span>
+  </header>
+
+  <section>
+    <h2>Menú</h2>
+    <div class="toggle" id="el-toggle">
+      <button id="tab-directo" class="on" data-chan="directo">💬 Directo</button>
+      <button id="tab-pedidosya" data-chan="pedidosya">🛵 PedidosYa</button>
+    </div>
+    <div class="save-banner" id="el-save" hidden></div>
+
+    <div id="el-menu"></div>
+
+    <div class="orden" id="el-orden"></div>
+
+    <div class="upsell" id="el-upsell"></div>
+  </section>
+
+  <section>
+    <h2>Pedí ahora</h2>
+    <a class="cta wa" id="el-wa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp<small>directo, sin comisión · respondemos al toque</small></a>
+    <a class="cta py" id="el-py" href="#" target="_blank" rel="noopener">Pedir por PedidosYa<small>delivery en moto · pagá con tarjeta o efectivo</small></a>
+  </section>
+
+  <section>
+    <h2>Info</h2>
+    <div class="info">
+      <div class="info-row"><span>Horario</span><span id="el-hours2"></span></div>
+      <div class="info-row"><span>Entrega</span><span id="el-zone"></span></div>
+      <div class="info-row"><span>Retiro en cocina</span><span>Disponible · coordinar por WhatsApp</span></div>
+      <div class="info-row"><span>Formas de pago</span><span>Efectivo · Transferencia · Mercado Pago</span></div>
+    </div>
+    <div class="qr-box">
+      <img id="el-qr" alt="QR del menú" src="">
+      <p>Escanéá para abrir este menú en tu celu</p>
+    </div>
+  </section>
+
+  <footer id="el-footer"></footer>
+
+</div>
+
+<script>
+  const cfg = JSON.parse(document.getElementById('config').textContent);
+  const FMT = n => '$' + n.toLocaleString('es-AR');
+  let chan = 'directo';
+  const p = () => chan === 'directo' ? 'precio' : 'precio_py';
+
+  // Header
+  document.getElementById('el-claim').textContent = cfg.tagline + ' · ' + cfg.claim;
+  document.getElementById('el-hours').textContent = cfg.hours;
+  document.getElementById('el-hours2').textContent = cfg.hours;
+  document.getElementById('el-zone').textContent = cfg.zone;
+
+  // Menú dinámico desde CONFIG
+  const menu = document.getElementById('el-menu');
+  cfg.menu.forEach(t => {
+    const card = document.createElement('div');
+    card.className = 'taco';
+    card.innerHTML = `
+      <div class="taco-top"><h3>${t.nombre}</h3><span class="price" data-price="${t.id}"></span></div>
+      <p class="desc">${t.desc}</p>
+      <div class="tags">${t.tags.map(x=>`<span class="tag">${x}</span>`).join('')}</div>`;
+    menu.appendChild(card);
+  });
+
+  const orden = document.getElementById('el-orden');
+  orden.innerHTML = `
+    <div class="lbl">${cfg.orden3.nombre}<small>${cfg.orden3.desc}</small></div>
+    <div class="big" id="el-order3"></div>`;
+
+  const upsell = document.getElementById('el-upsell');
+  upsell.innerHTML = `
+    <div class="lbl">🌶️ ${cfg.upsell.salsa_extra.nombre}<small>${cfg.upsell.salsa_extra.desc} · ${cfg.upsell.sexto_gratis}</small></div>
+    <span class="price">+${FMT(cfg.upsell.salsa_extra.precio)}</span>`;
+
+  function renderPrices() {
+    const key = p();
+    document.querySelectorAll('[data-price]').forEach(el => {
+      const t = cfg.menu.find(x => x.id === el.dataset.price);
+      el.textContent = FMT(t[key]);
+    });
+    document.getElementById('el-order3').textContent = FMT(cfg.orden3[key]);
+
+    const save = document.getElementById('el-save');
+    if (chan === 'directo') {
+      const diff = cfg.orden3.precio_py - cfg.orden3.precio;
+      save.hidden = false;
+      save.innerHTML = `💡 <b>Pedí directo y ahorrás ${FMT(diff)} (~${Math.round(diff/cfg.orden3.precio_py*100)}%)</b> por orden vs la app. Mismo taco, sin comisión de por medio. ${cfg.upsell.sexto_gratis}`;
+    } else {
+      save.hidden = true;
+    }
+    document.getElementById('tab-directo').classList.toggle('on', chan === 'directo');
+    document.getElementById('tab-pedidosya').classList.toggle('on', chan === 'pedidosya');
+  }
+  document.getElementById('tab-directo').addEventListener('click', () => { chan = 'directo'; renderPrices(); });
+  document.getElementById('tab-pedidosya').addEventListener('click', () => { chan = 'pedidosya'; renderPrices(); });
+  renderPrices();
+
+  const msg = encodeURIComponent(`¡Hola! Quiero pedir tacos 🌮 (directo, ${FMT(cfg.orden3.precio)} la orden de 3)\n\n` +
+    'Taco de Carne x_\nTaco de Pollo x_\nTaco de Verdura x_\nSalsa extra: _\n\n' +
+    `Total: $_\nDirección: _\nPago: _`);
+  document.getElementById('el-wa').href = `https://wa.me/${cfg.whatsapp}?text=${msg}`;
+  document.getElementById('el-py').href = cfg.pedidosya_url;
+  document.getElementById('el-qr').src =
+    `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(cfg.site_url)}`;
+  document.getElementById('el-footer').innerHTML =
+    `${cfg.brand} · <a href="${cfg.instagram}" target="_blank" rel="noopener" style="color:var(--verde)">@tressalsas.ok</a> · Hecho en casa con 🌮 · ${new Date().getFullYear()}`;
+</script>
+</body>
+</html>

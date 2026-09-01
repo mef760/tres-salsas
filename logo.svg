@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="600" height="200" viewBox="0 0 600 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fire" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E63946"/>
+      <stop offset="1" stop-color="#F4A261"/>
+    </linearGradient>
+  </defs>
+  <!-- Fondo tortilla -->
+  <rect width="600" height="200" rx="24" fill="#1D1A17"/>
+  <!-- "3" estilizado = gota de salsa cayendo -->
+  <g>
+    <text x="120" y="150" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="150" fill="url(#fire)" letter-spacing="-6">3</text>
+    <!-- gota cayendo del 3 -->
+    <path d="M100 130 C96 150 92 165 92 178 C92 190 102 198 116 198 C130 198 140 190 140 178 C140 165 136 150 132 130 C121 140 111 140 100 130 Z" fill="#E63946" opacity="0.85"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="170" y="108" font-family="Arial, Helvetica, sans-serif" font-weight="900" font-size="46" fill="#F1E3C3" letter-spacing="2">TRES SALSAS</text>
+  <text x="172" y="138" font-family="Arial, Helvetica, sans-serif" font-weight="600" font-size="16" fill="#2A9D8F" letter-spacing="4">3 TACOS · 3 SALSAS · HECHOS EN CASA</text>
+</svg>
