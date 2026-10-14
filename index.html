@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TRES SALSAS · Tacos caseros</title>
-<meta name="description" content="3 tacos. 3 salsas. Hechos en casa. Tacos de carne, pollo y verdura — pedí directo por WhatsApp o por PedidosYa.">
+<meta name="description" content="3 tacos. 3 salsas. Hechos en casa. Tacos de osobuco, pollo y verdura — pedí por WhatsApp o por PedidosYa.">
 <meta property="og:title" content="TRES SALSAS · Tacos caseros">
 <meta property="og:description" content="3 tacos. 3 salsas. Hechos en casa.">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="logo.png">
+<link rel="apple-touch-icon" href="logo.png">
 <style>
   :root{
     --fire:#E63946; --tortilla:#F1E3C3; --verde:#2A9D8F; --ink:#1D1A17;
@@ -42,6 +43,7 @@
   .upsell .lbl{font-size:14px}
   .upsell .lbl small{display:block;color:var(--muted);font-size:12px;margin-top:2px}
   .upsell .price{font-weight:900;color:var(--fire);font-size:16px;white-space:nowrap}
+  h3.cat{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:22px 0 8px}
   .orden{background:var(--panel);border:1px dashed var(--verde);border-radius:var(--radius);padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:6px}
   .orden .lbl{font-size:13px;color:var(--muted)}
   .orden .lbl small{display:block;margin-top:2px}
@@ -72,16 +74,22 @@
     "hours": "Mar a Dom · 18:00 a 23:30",
     "zone": "Zona de entrega: 3 km a la redonda",
     "whatsapp": "5491100000000",
-    "pedidosya_url": "https://socios.pedidosya.com.ar/es",
+    "pedidosya_url": "https://www.pedidosya.com.ar/restaurantes/buenos-aires/tres-salsas-dcb6e0bc-b6e6-4aee-a175-fcf43838454d-menu",
     "site_url": "https://mef760.github.io/tres-salsas/",
-    "commission": 0.30,
     "menu": [
-      { "id":"carne",   "nombre":"Taco de Carne",   "desc":"Carne picada salteada a la plancha, cebolla pochada, cilantro fresco y salsa ROJA AHUMADA.",            "precio":4500,"precio_py":6800,"tags":["clásico"] },
-      { "id":"pollo",   "nombre":"Taco de Pollo",   "desc":"Suprema marinada en limón, ajo y comino; verde PICANTE de mortero. El que no sabe a pollo de cadena.", "precio":4500,"precio_py":6800,"tags":["estrella"] },
-      { "id":"verdura", "nombre":"Taco de Verdura", "desc":"Mix de calabacín, cebolla, pimiento y choclo salteado con queso gratinado y CREMA SUAVE.",        "precio":4500,"precio_py":6800,"tags":["veggie"] }
+      { "cat":"Tacos sueltos", "id":"osobuco",       "nombre":"Taco de osobuco (carne)", "desc":"Tortilla de trigo rellena de osobuco braseado y desmechado, mix de vegetales, cebolla y perejil fresco. Acompañado con limón y salsa.", "precio":7100, "tags":["clásico"] },
+      { "cat":"Tacos sueltos", "id":"osobuco-costra","nombre":"Taco de osobuco con costra de queso", "desc":"Tortilla de trigo con costra de queso rellena de osobuco, mix de vegetales, cebolla y perejil fresco.", "precio":7600, "tags":["más vendido"] },
+      { "cat":"Tacos sueltos", "id":"pollo",         "nombre":"Taco de pollo", "desc":"Suprema marinada en limón, ajo y comino. El que no sabe a pollo de cadena. Salsa verde picante.", "precio":6800, "tags":["estrella"] },
+      { "cat":"Tacos sueltos", "id":"pollo-costra",  "nombre":"Taco de pollo con costra de queso", "desc":"Tortilla de trigo rellena de pollo en tiras, mix de vegetales, cebolla y perejil fresco. Con costra de queso en la tortilla.", "precio":7400, "tags":["más vendido"] },
+      { "cat":"Tacos sueltos", "id":"verdura",       "nombre":"Taco de verdura", "desc":"Calabacín, cebolla, pimiento y choclo salteado con queso gratinado. Salsa crema suave.", "precio":6800, "tags":["veggie"] },
+      { "cat":"Tacos sueltos", "id":"verdura-costra","nombre":"Taco de verduras con costra de queso", "desc":"Tortilla de trigo con costra de queso, rellena de choclo, morrón, cebolla y zucchini salteados.", "precio":7400, "tags":["veggie"] },
+      { "cat":"Tríos y party", "id":"trio",          "nombre":"Trío clásico", "desc":"3 tortillas de trigo con relleno a elección: pollo salteado, osobuco desmechado o vegetales salteados. Acompañados de morrones y cebolla. Vienen para armar a tu gusto. Incluye 2 salsas.", "precio":19990, "tags":["3 tacos"] },
+      { "cat":"Tríos y party", "id":"trio-costra",   "nombre":"Trío con costra de queso", "desc":"Tres tacos para armar con costra de queso dorado (pollo, osobuco o veggie). Incluye salsas a elección.", "precio":23500, "tags":["más vendido"] },
+      { "cat":"Tríos y party", "id":"party",         "nombre":"Taco party (6 unidades)", "desc":"Tacos para armar: 3 de osobuco y 3 de pollo. Incluye salsas a elección.", "precio":38000, "tags":["para compartir"] },
+      { "cat":"Extras", "id":"mayo",        "nombre":"Mayonesa casera de ajo", "desc":"Emulsión suave y cremosa, toque de ajo.", "precio":1900, "tags":["más vendido"] },
+      { "cat":"Extras", "id":"salsa-verde", "nombre":"Salsa verde extra", "desc":"Salsa casera fresca y cítrica a base de morrón verde, perejil, cebolla, ajo y limón. Sin picante.", "precio":1900, "tags":[] },
+      { "cat":"Extras", "id":"salsa-roja",  "nombre":"Salsa roja extra", "desc":"Salsa casera a base de tomate asado, ajo y chile. Nivel de picante medio.", "precio":1900, "tags":[] }
     ],
-    "orden3": { "nombre":"Orden de 3 tacos", "desc":"Elegí 3 (podés combinar). Sale con las 3 salsas.", "precio":13000, "precio_py":19500 },
-    "upsell": { "salsa_extra":{"nombre":"Salsa extra","desc":"Verde picante, roja ahumada o crema suave","precio":500}, "sexto_gratis":"Tu 6º pedido directo: GRATIS" },
     "instagram": "https://instagram.com/tressalsas.ok"
   }
   </script>
@@ -96,22 +104,15 @@
 
   <section>
     <h2>Menú</h2>
-    <div class="toggle" id="el-toggle">
-      <button id="tab-directo" class="on" data-chan="directo">💬 Directo</button>
-      <button id="tab-pedidosya" data-chan="pedidosya">🛵 PedidosYa</button>
-    </div>
-    <div class="save-banner" id="el-save" hidden></div>
+    <div class="save-banner">🎁 <b>Tu 6º pedido por WhatsApp: GRATIS</b></div>
 
     <div id="el-menu"></div>
 
-    <div class="orden" id="el-orden"></div>
-
-    <div class="upsell" id="el-upsell"></div>
   </section>
 
   <section>
     <h2>Pedí ahora</h2>
-    <a class="cta wa" id="el-wa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp<small>directo, sin comisión · respondemos al toque</small></a>
+    <a class="cta wa" id="el-wa" href="#" target="_blank" rel="noopener">Pedir por WhatsApp<small>directo, mismos precios · respondemos al toque</small></a>
     <a class="cta py" id="el-py" href="#" target="_blank" rel="noopener">Pedir por PedidosYa<small>delivery en moto · pagá con tarjeta o efectivo</small></a>
   </section>
 
@@ -136,8 +137,6 @@
 <script>
   const cfg = JSON.parse(document.getElementById('config').textContent);
   const FMT = n => '$' + n.toLocaleString('es-AR');
-  let chan = 'directo';
-  const p = () => chan === 'directo' ? 'precio' : 'precio_py';
 
   // Header
   document.getElementById('el-claim').textContent = cfg.tagline + ' · ' + cfg.claim;
@@ -147,7 +146,15 @@
 
   // Menú dinámico desde CONFIG
   const menu = document.getElementById('el-menu');
+  let lastCat = null;
   cfg.menu.forEach(t => {
+    if (t.cat !== lastCat) {
+      const h = document.createElement('h3');
+      h.className = 'cat';
+      h.textContent = t.cat;
+      menu.appendChild(h);
+      lastCat = t.cat;
+    }
     const card = document.createElement('div');
     card.className = 'taco';
     card.innerHTML = `
@@ -157,42 +164,13 @@
     menu.appendChild(card);
   });
 
-  const orden = document.getElementById('el-orden');
-  orden.innerHTML = `
-    <div class="lbl">${cfg.orden3.nombre}<small>${cfg.orden3.desc}</small></div>
-    <div class="big" id="el-order3"></div>`;
+  document.querySelectorAll('[data-price]').forEach(el => {
+    el.textContent = FMT(cfg.menu.find(x => x.id === el.dataset.price).precio);
+  });
 
-  const upsell = document.getElementById('el-upsell');
-  upsell.innerHTML = `
-    <div class="lbl">🌶️ ${cfg.upsell.salsa_extra.nombre}<small>${cfg.upsell.salsa_extra.desc} · ${cfg.upsell.sexto_gratis}</small></div>
-    <span class="price">+${FMT(cfg.upsell.salsa_extra.precio)}</span>`;
-
-  function renderPrices() {
-    const key = p();
-    document.querySelectorAll('[data-price]').forEach(el => {
-      const t = cfg.menu.find(x => x.id === el.dataset.price);
-      el.textContent = FMT(t[key]);
-    });
-    document.getElementById('el-order3').textContent = FMT(cfg.orden3[key]);
-
-    const save = document.getElementById('el-save');
-    if (chan === 'directo') {
-      const diff = cfg.orden3.precio_py - cfg.orden3.precio;
-      save.hidden = false;
-      save.innerHTML = `💡 <b>Pedí directo y ahorrás ${FMT(diff)} (~${Math.round(diff/cfg.orden3.precio_py*100)}%)</b> por orden vs la app. Mismo taco, sin comisión de por medio. ${cfg.upsell.sexto_gratis}`;
-    } else {
-      save.hidden = true;
-    }
-    document.getElementById('tab-directo').classList.toggle('on', chan === 'directo');
-    document.getElementById('tab-pedidosya').classList.toggle('on', chan === 'pedidosya');
-  }
-  document.getElementById('tab-directo').addEventListener('click', () => { chan = 'directo'; renderPrices(); });
-  document.getElementById('tab-pedidosya').addEventListener('click', () => { chan = 'pedidosya'; renderPrices(); });
-  renderPrices();
-
-  const msg = encodeURIComponent(`¡Hola! Quiero pedir tacos 🌮 (directo, ${FMT(cfg.orden3.precio)} la orden de 3)\n\n` +
-    'Taco de Carne x_\nTaco de Pollo x_\nTaco de Verdura x_\nSalsa extra: _\n\n' +
-    `Total: $_\nDirección: _\nPago: _`);
+  const msg = encodeURIComponent('¡Hola! Quiero pedir tacos 🌮 \n\n' +
+    'Taco de osobuco x_\nTaco de pollo x_\nTaco de verdura x_\nTrío / Party: _\nExtras: _\n\n' +
+    'Total: $_\nDirección: _\nPago: _');
   document.getElementById('el-wa').href = `https://wa.me/${cfg.whatsapp}?text=${msg}`;
   document.getElementById('el-py').href = cfg.pedidosya_url;
   document.getElementById('el-qr').src =
